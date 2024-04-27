@@ -52,23 +52,23 @@ class MountViewSet(viewsets.ModelViewSet):
                     }
                 )
 
-            if status.HTTP_400_BAD_REQUEST:
-                return Response(
-                    {
-                        'status': status.HTTP_400_BAD_REQUEST,
-                        'message': 'Некорректный запрос',
-                        'id': None,
-                    }
-                )
-
-            if status.HTTP_500_INTERNAL_SERVER_ERROR:
-                return Response(
-                    {
-                        'status': status.HTTP_500_INTERNAL_SERVER_ERROR,
-                        'message': 'Ошибка при выполнении операции',
-                        'id': None,
-                    }
-                )
+            # if status.HTTP_400_BAD_REQUEST:
+            #     return Response(
+            #         {
+            #             'status': status.HTTP_400_BAD_REQUEST,
+            #             'message': 'Некорректный запрос',
+            #             'id': None,
+            #         }
+            #     )
+            #
+            # if status.HTTP_500_INTERNAL_SERVER_ERROR:
+            #     return Response(
+            #         {
+            #             'status': status.HTTP_500_INTERNAL_SERVER_ERROR,
+            #             'message': 'Ошибка при выполнении операции',
+            #             'id': None,
+            #         }
+            #     )
         return super().create(request, *args, **kwargs)
 
     # Возможность частичного редактирования данных о перевале (при статусе "new")
