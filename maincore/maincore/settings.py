@@ -91,21 +91,6 @@ DATABASES = {
     }
 }
 
-#load_dotenv(find_dotenv())
-#
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'sprint_db',#os.getenv('NAME'),
-#         'USER': 'stas',#os.getenv('USER'),
-#         'PASSWORD': 'stas',#os.getenv('PASS'),
-#         'HOST': '192.168.56.101',#os.getenv('HOST'),
-#         'PORT': 5432#os.getenv('PORT'),
-#     },
-# }
-
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
