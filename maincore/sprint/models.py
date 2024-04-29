@@ -10,7 +10,7 @@ class User(models.Model):
     surname = models.CharField(max_length=100, verbose_name='Фамилия')
     otc = models.CharField(max_length=100, verbose_name='Отчество')
     email = models.EmailField(max_length=100, verbose_name='Почта')
-    phone = models.IntegerField(verbose_name='Телефон')
+    phone = models.CharField(max_length=12, verbose_name='Телефон')
 
     def __str__(self):
         return f'{self.pk}: {self.name} {self.surname}'
